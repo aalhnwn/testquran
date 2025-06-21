@@ -4,10 +4,12 @@ const button = document.querySelectorAll(".random button");
 const text2 = document.querySelector(".text2 p");
 const names = document.querySelectorAll(".name");
 const suras = document.getElementById("suras");
+let index2 = localStorage.getItem("index");
+if (!index2) {
+    localStorage.setItem("index",0);
+}
 let index = localStorage.getItem("index");
-
 suras.value = index;
-
 suras.addEventListener("change",function(){
     localStorage.setItem("index",this.value);
     location.reload();
