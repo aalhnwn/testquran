@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Naskh Arabic', sans-serif;
+}
+
+body {
+  background: linear-gradient(145deg, #1e1e2f, #292945);
+  color: #fdfdfd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.hed {
+  text-align: center;
+  padding: 30px 20px;
+  width: 100%;
+  max-width: 600px;
+  background-color: #202040cc;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #0004;
+}
+.random svg{
+  max-width: 50px;
+  max-height: 50px;
+  position: absolute;
+  right: 5px;
+}
+h1, h2 {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.color-accent {
+  color: #ffcc70;
+  font-weight: bold;
+}
+
+.color-highlight {
+  color: #9ddcff;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+#suras{
+  font-size: .8em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  color: #ffcc70;
+}
+#suras::-webkit-scrollbar{
+  display: none;
+}
+#suras option{
+  color: #fff;
+  background: #292945;
+}
+.text3 {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 15px;
+}
+
+.random {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #5b247a, #1bcedf);
+  box-shadow: 0 4px 12px #0005;
+}
+
+.random button {
+  width: 100%;
+  padding: 12px 0;
+  background: transparent;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s ease;
+}
+
+.random button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: skewX(-45deg);
+  transition: 0.4s ease;
+  z-index: 0;
+}
+
+.random button:hover::before {
+  left: 100%;
+}
+
+.random button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.random button span {
+  position: relative;
+  z-index: 2;
+}
+.anim{
+  animation: n .5s;
+}
+@keyframes n {
+  0%{transform: translateX(0);}
+  20%{transform: translateX(5px);}
+  40%{transform: translateX(-5px);}
+  60%{transform: translateX(5px);}
+  80%{transform: translateX(-5px);}
+  100%{transform: translateX(0);}
+}
