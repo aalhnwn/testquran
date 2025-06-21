@@ -10,6 +10,7 @@ if (!index2) {
 }
 let index = localStorage.getItem("index");
 suras.value = index;
+document.title =" آية عشوائية من سورة "+data[index].name
 suras.addEventListener("change",function(){
     localStorage.setItem("index",this.value);
     location.reload();
